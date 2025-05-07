@@ -89,12 +89,12 @@
 
         async function getClientReport() {
             const id = document.getElementById("searchClientId").value;
-            const res = await fetch(apiBase + "clients/" + id);
-            const data = await res.json();
-            if (!data || data.invoices === undefined) {
-                alert("לקוח לא נמצא");
-                return;
-            }
+              const response = await fetch(`https://74.234.81.15/ClientPaymentApi/api/clients/by-name/${encodeURIComponent(id)}`);
+    if (!response.ok) {
+        alert("לקוח לא נמצא");
+        return;
+    }
+    
 
             let html = `<h6>${data.fullName}</h6><ul>`;
             data.invoices.forEach(inv => {
