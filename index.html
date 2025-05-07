@@ -113,6 +113,18 @@
             doc.text(document.getElementById("clientReport").innerText, 10, 10);
             doc.save("report.pdf");
         }
+async function searchClientByName() {
+    const name = document.getElementById("searchInput").value;
+
+    const response = await fetch(`https://74.234.81.15/ClientPaymentApi/api/clients/by-name/${encodeURIComponent(name)}`);
+    if (!response.ok) {
+        alert("לקוח לא נמצא");
+        return;
+    }
+
+    const client = await response.json();
+    console.log(client); // או תציג אותו בדף
+}
 
         function downloadExcel() {
             const reportText = document.getElementById("clientReport").innerText;
