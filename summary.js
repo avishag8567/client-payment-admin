@@ -1,5 +1,5 @@
 
-fetch("https://localhost:5001/api/clients/summary")
+fetch("https://74.234.81.15/ClientPaymentApi/api/clients/summary")
     .then(res => res.json())
     .then(data => {
         const table = document.getElementById("summaryTable");
