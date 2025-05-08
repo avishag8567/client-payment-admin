@@ -7,7 +7,7 @@ function addInvoice() {
         description: document.getElementById("description").value
     };
 
-    fetch("https://localhost:5001/api/invoices", {
+    fetch("https://74.234.81.15/ClientPaymentApi/api/invoices", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(invoice)
