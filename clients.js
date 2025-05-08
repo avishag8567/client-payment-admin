@@ -1,5 +1,5 @@
 
-const apiUrl = "https://localhost:5001/api/clients";
+const apiUrl = "https://74.234.81.15/ClientPaymentApi/api/clients";
 
 document.getElementById("searchName").addEventListener("input", searchByName);
 document.getElementById("searchPhone").addEventListener("input", searchByPhone);
