@@ -1,7 +1,7 @@
 
 function getInvoices() {
     const name = document.getElementById("clientName").value;
-    fetch(`https://localhost:5001/api/invoices/by-client-name/${name}`)
+    fetch(`https://74.234.81.15/ClientPaymentApi/api/invoices/by-client-name/${name}`)
         .then(res => res.json())
         .then(data => {
             const table = document.getElementById("invoicesTable");
